@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "anvesha"
+version = "0.1.0"
+description = "Anvesha - Research Assistant Kit for ML and CV research"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.5",
+    "PyYAML>=6.0",
+    "openai>=1.40",
+]
+
+[project.optional-dependencies]
+cloud = ["anthropic>=0.34", "google-generativeai>=0.7"]
+hf = ["transformers>=4.40", "torch>=2.2"]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+anvesha = "anvesha.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["anvesha*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

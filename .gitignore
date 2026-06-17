@@ -216,3 +216,14 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- Anvesha project-specific ---
+
+# Claude Code local state (uncomment-exclude this line to share project settings)
+.claude/
+
+# Anvesha research-project machine-local state (ANVESHA.md S12.5)
+.anvesha/
+
+# OS
+.DS_Store
